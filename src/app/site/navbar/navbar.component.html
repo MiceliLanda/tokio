@@ -1,0 +1,31 @@
+<header class="site-header-one stricky site-header-one__fixed-top" style="background:#ffffff;">
+  <div class="container-fluid">
+    <div class="site-header-one__logo">
+      <a href="index.html">
+        <img src="assets/images/logo-1-1.png" width="129" alt="">
+      </a>
+      <span class="side-menu__toggler"><i class="fa fa-bars"></i></span><!-- /.side-menu__toggler -->
+    </div>
+    <div class="main-nav__main-navigation">
+      <ul class="main-nav__navigation-box one-page-scroll-menu">
+        <li class="scrollToLink"> <a routerLink="/home">Home</a></li>
+        <li class="scrollToLink"><a routerLink="/register">Create Account</a></li>
+        <li class="dropdown scrollToLink">
+        </li>
+      </ul>
+    </div>
+    <div class="main-nav__main-navigation" style="padding-left: 365px;">
+      <ul class="main-nav__navigation-box" *ngIf="user$ | async as user; else login">
+        <li *ngIf="user"> 
+          <a class="main-nav__main-navigation" style="padding-right: 20px;">
+            {{ user?.email }}
+          </a>
+        </li>
+        <a href="/login" (click)="onLogout()" class="thm-btn main-nav__btn" style="background:#8c8c8c;"><span> Logout </span></a>
+      </ul>
+       <ng-template #login>
+        <a routerLink="/login" class="thm-btn main-nav__btn" style="background:#8c8c8c;"><span>Sign In</span></a> 
+      </ng-template> 
+    </div> 
+  </div>
+</header>

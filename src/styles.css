@@ -1,0 +1,18 @@
+body {
+     background-image: url(./assets/images/backgrounds/tokyo-cityscape-nature-wallpaper-background.jpg);
+}
+
+.box{
+    background: #fff;
+    opacity: 70%;
+    padding: 40px;  
+}
+
+.row{
+    margin: 20px;
+
+}
+
+.box:hover{
+    opacity: 100%;
+}

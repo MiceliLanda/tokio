@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<br><br><br>
+<link rel="stylesheet" href="/src/styles.css">
+<div class="row">
+    <div class="col-md-4 mx-auto mt-5">
+      <div >
+        <div class="box">
+          <h1 class="text-center" style="color: #8c8c8c; font-weight: bold;">Sign in</h1>
+          <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <div class="form-group">
+              <label for="email" id="email" style="color: #8c8c8c; font-weight: bold;">Email</label>
+              <input type="email" class="form-control" formControlName="email" />
+            </div>
+            <div class="form-group">
+              <label for="password" id="password" style="color: #8c8c8c; font-weight: bold;">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                formControlName="password"
+              />
+            </div>
+            <br>
+            <button class="btn btn-primary btn-lg btn-block" style="background: #001affb7; font-weight: bold;">
+              Login
+            </button>
+          </form>
+          <div class="form-group mt-3">
+            <button (click)="onGoogleLogin()" class="btn btn-danger btn-lg btn-block" style="background: tomato;font-weight: bold;">
+              Google
+            </button>
+          </div>
+          <div class="form-group mt-3">
+            <p style="color: #8c8c8c ;font-weight: bold;font-size:16px;">
+              Create account <a [routerLink]="['/register']"> Register </a>
+            </p>
+          </div>
+          <div class="form-group mt-3" style="color: rgb(35, 37, 53); font-size:16px;">
+            <p>
+              <a [routerLink]="['/remember-password']"style="font-weight: bold;"> Forgot password </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

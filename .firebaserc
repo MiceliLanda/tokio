@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "clashwebsite-4971f": {
+      "hosting": {
+        "clash-website": [
+          "clashwebsite-4971f"
+        ]
+      }
+    }
+  }
+}
